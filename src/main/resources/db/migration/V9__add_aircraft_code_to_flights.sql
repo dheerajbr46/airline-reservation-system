@@ -1,0 +1,2 @@
+ALTER TABLE flights
+    ADD COLUMN aircraft_code VARCHAR(20) NOT NULL DEFAULT 'UNKNOWN';

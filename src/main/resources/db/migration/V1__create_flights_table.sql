@@ -1,0 +1,10 @@
+CREATE TABLE flights (
+    id UUID PRIMARY KEY,
+    flight_number VARCHAR(20) NOT NULL,
+    origin VARCHAR(10) NOT NULL,
+    destination VARCHAR(10) NOT NULL,
+    departure_time TIMESTAMP NOT NULL,
+    arrival_time TIMESTAMP NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

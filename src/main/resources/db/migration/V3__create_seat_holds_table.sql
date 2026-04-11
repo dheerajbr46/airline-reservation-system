@@ -1,0 +1,15 @@
+CREATE TABLE seat_holds (
+    id UUID PRIMARY KEY,
+    seat_id UUID NOT NULL,
+    hold_reference VARCHAR(50) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    held_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    expires_at TIMESTAMP NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_seat_holds_seat
+        FOREIGN KEY (seat_id)
+        REFERENCES seats (id)
+        ON DELETE CASCADE
+);

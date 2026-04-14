@@ -6,6 +6,14 @@ This project is built as a modular monolith with production-style boundaries, tr
 
 The core engineering challenge is not basic CRUD. The heart of the system is safely moving limited seat inventory through states such as `AVAILABLE`, `HELD`, and `BOOKED` while multiple users may be trying to reserve the same seat at the same time.
 
+## High-Level Flow Demo
+
+For a non-technical walkthrough of the happy path, open the animated demo:
+
+[High-Level Seat Hold and Booking Flow Demo](docs/high-level-flow-demo.html)
+
+It shows how a traveler finds a flight, selects a seat, receives a temporary hold, confirms the booking, and ends with the seat safely marked as booked.
+
 ## Project Overview
 
 The platform supports the first major backend milestones of an airline reservation system:
